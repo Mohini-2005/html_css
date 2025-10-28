@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            padding-top: 10px;
+        }
+        a{
+        margin-top: 50px; 
+        }
+        #Link1{
+            color: rgb(72, 231, 186);
+        }
+        #Link1:hover{
+            color: rgb(121, 37, 211);
+        }
+
+        #Link2{
+            color: rgb(225, 236, 101);
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        #Link3{
+            border: 1px solid rgb(84, 66, 204);
+            padding: 8px 14px;
+            text-decoration: none;
+            color: black;
+
+            &:hover{
+                background-color: rgb(230, 75, 75);
+                color: white;
+            }
+        }
+
+        #Link4{
+            background-color: red;
+            text-decoration: none;
+            padding: 8px 10px;
+            border: 1px solid red;
+            color: white;
+            &:hover{
+                background-color: tomato;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <a id="Link1" href="">Link 1</a>
+    <a id="Link2" href="">Link 2</a>
+    <a id="Link3" href="">Link 3</a>
+    <a id="Link4" href="">Link 4</a>
+
+</body>
+</html>

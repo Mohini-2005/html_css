@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blood Donation Camp</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #fdfdfd;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #e74c3c;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    section {
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #e74c3c;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f7f7f7;
+    }
+
+    .registration form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .registration label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .registration input,
+    .registration select {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .registration button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .registration button:hover {
+      background-color: #c0392b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #f4f4f4;
+      color: #666;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+
+      td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Blood Donation Camp</h1>
+    <p>Give the gift of life. Donate blood and save lives.</p>
+  </header>
+
+  <section class="about">
+    <h2>Why Donate Blood?</h2>
+    <p>
+      Every two seconds, someone needs blood. Donating blood is a simple act that can save up to three lives. Join our mission and be a hero today!
+    </p>
+  </section>
+
+  <section class="drives">
+    <h2>Upcoming Blood Donation Drives</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Date">Oct 20, 2025</td>
+          <td data-label="Location">City Hospital, Newtown</td>
+          <td data-label="Time">10:00 AM – 2:00 PM</td>
+        </tr>
+        <tr>
+          <td data-label="Date">Oct 25, 2025</td>
+          <td data-label="Location">Community Hall, Greenside</td>
+          <td data-label="Time">9:00 AM – 1:00 PM</td>
+        </tr>
+        <tr>
+          <td data-label="Date">Nov 2, 2025</td>
+          <td data-label="Location">Red Cross Center, Downtown</td>
+          <td data-label="Time">11:00 AM – 3:00 PM</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="registration">
+    <h2>Register for a Blood Donation Drive</h2>
+    <form action="#" method="POST">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="drive">Select Drive:</label>
+      <select id="drive" name="drive" required>
+        <option value="">--Choose a Drive--</option>
+        <option value="oct20">Oct 20 - City Hospital</option>
+        <option value="oct25">Oct 25 - Community Hall</option>
+        <option value="nov2">Nov 2 - Red Cross Center</option>
+      </select>
+
+      <button type="submit">Register Now</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Blood Donation Initiative. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
